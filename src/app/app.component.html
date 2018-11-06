@@ -1,0 +1,179 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> Vensi Inc </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    
+    *{ 
+    margin: 0px;
+    
+}
+
+#sidebar {
+	position:fixed; 
+	height: 100%;
+	width:16%;
+	margin: 0px;  
+  background: rgb(43, 1, 71);
+  float: left;
+}
+
+#menu a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+#menu a:hover {
+    color: #f1f1f1;
+}
+#sHeader a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: WHITE;
+    display: block;
+}
+
+#rightSideWrapper {
+	width:84%; 
+	float: right;
+	background: rgb(187, 175, 175);	
+}
+
+header{
+  position: fixed;
+  float: left;
+  font-size: 25px;
+  color: white;
+	width: 84%;	
+	height: 46px; 
+	background: black;
+}
+
+#header h2{
+  font-size: 25px;
+}
+
+
+
+.ContentBox{
+	margin-top: 46px;
+	display:block;
+	flex-flow: row wrap;
+} 
+
+main, section, footer {
+
+	 background: white; 
+	 
+	 margin: 5px; 
+	 
+}
+
+main {
+  height: 200px;
+  order: 1;
+  flex: 0 1 100%; 
+	
+}
+
+section {
+   height: 1000px;
+   order: 2;
+   flex: 0 1 100%;
+	
+}
+
+footer {
+  height: 100px;
+  order: 3;
+  flex: 0 1 100%;
+}
+
+    </style>
+	</head>
+  
+	<body>
+    
+		<div id="sidebar">
+        <div id=sHeader>
+            <a>MENU:</a>
+            <br/>
+        </div>
+       
+        <div id="menu">
+            
+            <a href="#home"><i class="fa fa-fw fa-upload"></i> DATA IMPORT</a>
+            <a href="#data"><i class="fa fa-fw fa-bar-chart"></i> ANALYSIS</a>
+            <a href="#code"><i class="fa fa-fw fa-code"></i> CODE</a>
+        </div>
+		</div>
+		<div id="rightSideWrapper">
+			<header> 
+			    <h2 align ="center" font-size="25px"> VENSI SMART SHELF DASHBOARD <img src="assets/img/vensi.png" float="right" width="42px" height="42px"> </h2>
+
+			</header>
+			
+			<div class="ContentBox">
+				<main>
+          <br/> 
+          <h2>INPUT VALUES FOR TRAINING DATA: </h2>
+          <div align="center">
+          <table align="center">
+              <tr>
+                <td>ITEM COUNT: </td>
+                <input  type="number" name="Num1" placeholder="Enter no. of items">
+              </tr>
+              <tr>
+              <td>TOTAL WEIGHT:</td> 
+              <input  type="number" name="Num2" placeholder="Enter total weight"> 
+              </tr>
+            </table>
+
+          </div>
+        
+            <br/>
+          <div align = "center">
+            <button  class="button" >Run Analysis</button>
+          </div>
+      
+				</main>
+
+				<section>
+            <br/> 
+        <h2>ANALYSIS: </h2>
+        <br/>
+        <div>
+            <h3>STATISTICAL: </h3>
+           
+              <img src="assets/img/anova.png" width="300px" height="300px">
+            
+           
+        </div>
+        <br/>
+        <div>
+            <h3>GRAPHICAL: </h3>
+            <img src="assets/img/analysis.jpg" width="500px" height="500px">
+        </div>
+				</section>
+
+				<footer> 
+					 
+				</footer>
+
+			</div>
+			
+		</div>
+
+	</body>
+	
+
+	
+
+</html>
