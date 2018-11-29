@@ -7,14 +7,12 @@ let awsConfig = {
 AWS.config.update(awsConfig);
 
 let docClient = new AWS.DynamoDB.DocumentClient();
-    var params = {}
-    params.TableName = "coke";
-    var key = { "count": 1,
-                "weight": 1.19 };
-    params.Key = key;
-    
 
-    docClient.get(params, function (err, data) {
+    var params = {TableName : "coke"};
+   // var key = { "count"  : "weight" ,};
+   // params.Key = key;
+    
+      docClient.scan(params, function (err, data) {
         if (err) {
             console.log("users::fetchOneByKey::error - " + JSON.stringify(err, null, 2));
         }
