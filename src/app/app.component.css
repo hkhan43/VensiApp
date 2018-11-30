@@ -181,3 +181,7 @@ flex: 0 1 100%;
 {
     fill: FireBrick;
 }
+
+.mySvg{
+    background-color: cadetblue;
+}

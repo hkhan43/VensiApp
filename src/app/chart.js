@@ -1,5 +1,7 @@
 import * as d3 from "d3";
 
+InitChart();
+
 function InitChart() {
 
   var lineData = [{
@@ -86,4 +88,3 @@ vis.append("svg:path")
 
 }
 
-InitChart();

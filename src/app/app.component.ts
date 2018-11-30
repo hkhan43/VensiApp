@@ -30,6 +30,4 @@ export class AppComponent implements AfterContentInit {
       .attr('fill', 'red');
   }
 
-
-
 }
