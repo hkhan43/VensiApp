@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import * as d3 from "d3";
 import { AfterContentInit } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,7 +26,9 @@ export class AppComponent implements AfterContentInit {
       .attr('r', () => {
         return this.radius;
       })
-      .attr('fill', 'red');
+      .attr('fill', 'red');   
   }
-
 }
+
+
+ 

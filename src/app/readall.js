@@ -9,6 +9,7 @@ AWS.config.update(awsConfig);
 let docClient = new AWS.DynamoDB.DocumentClient();
 
     var params = {TableName : "coke"};
+    var data_tmp = {};
    // var key = { "count"  : "weight" ,};
    // params.Key = key;
     
@@ -18,5 +19,8 @@ let docClient = new AWS.DynamoDB.DocumentClient();
         }
         else {
             console.log("users::fetchOneByKey::success - " + JSON.stringify(data, null, 2));
+            data_tmp = data;
+
+
         }
     })
