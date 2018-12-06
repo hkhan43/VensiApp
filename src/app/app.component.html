@@ -32,21 +32,12 @@
 
         </div>
 
-
-
-
-        
-
-
 		<div id="rightSideWrapper">
             
             <header> 
 			    <h2>SMART SHELF DASHBOARD</h2>
             </header>
 
-
-            
-			
 			<div class="ContentBox">
 
                     <div id="subHeader">    
@@ -58,51 +49,91 @@
           <br/>  
           <br/> 
           <br/> 
-          <h2>INPUT VALUES FOR TRAINING DATA: </h2>
+          <h2 align = "center">Select an action </h2>
           <div align="center">
-          <table align="center">
-              <tr>
-                <td>ITEM TYPE: </td>
-                <input list="items" name="items">
-                <datalist id="items">
-                  <option value="Coke">
-                  <option value="Gatorade">
-                  <option value="Pure Leaf">
-                </datalist>
-              </tr>
-              <tr>
-              <td>TOTAL WEIGHT:</td> 
-              <input  type="number" name="Num2" placeholder="Enter total weight"> 
-              </tr>
-              <br/> 
-            </table>
-
+              <button (click)="onClickOpenWriteForm()" id="writeToDb" class="button">Write Values</button>
+            <br/> 
           </div>
-        
+          <div align="center">
+            <button (click)="onClickOpenPredictForm()" id="runAnalysis" class="button">Predict</button>
+          <br/> 
+        </div>        
             <br/>
-          <div align = "center">
-            <button  class="button">Run Analysis</button>
-          </div>
-          <br/> 
-          <br/> 
-				</main>
 
-				<section>
+          <br/> 
+        </main>
+        
+        <div [hidden]="!write" align = "center">
+            <form style="background-color:rgb(255, 255, 255)">
+             <table align="center">
+                <tr>
+                  <td>ITEM TYPE </td>
+                  <input list="items" name="items">
+                  <datalist id="items">
+                    <option value="Coke">
+                    <option value="Gatorade">
+                    <option value="Pure Leaf">
+                  </datalist>
+                </tr>
+                <tr>
+                <td>TOTAL WEIGHT</td> 
+                <input  type="number" name="weight" placeholder="Enter total weight"> 
+                </tr>
+                <tr>
+                    <td>COUNT</td> 
+                    <input  type="number" name="count" placeholder="Enter count"> 
+                </tr>   
+                <tr>
+                    <td></td> 
+                    <button id="writeToDb2" class="button">Train Model</button>
+                </tr>                                
+                <br/> 
+              </table>  
+              </form>        
+        </div>
+
+        <div [hidden]="!predict" align = "center">
+            <form style="background-color:rgb(255, 255, 255)">
+             <table align="center">
+                <tr>
+                  <td>ITEM TYPE </td>
+                  <input list="items" name="items">
+                  <datalist id="items">
+                    <option value="Coke">
+                    <option value="Gatorade">
+                    <option value="Pure Leaf">
+                  </datalist>
+                </tr>
+                <tr>
+                <td>TOTAL WEIGHT</td> 
+                <input  type="number" name="weight" placeholder="Enter total weight"> 
+                </tr>  
+                <tr>
+                    <td></td> 
+                    <button (click)="onClickOpenGraphs()" id="predict2" class="button">Run Prediction</button>
+                </tr>                                
+                <br/> 
+              </table>  
+              </form>   
+              <button (click)="onClickOpenGraphs()" id="predict2" class="button">Run Prediction</button>     
+        </div>        
+
+        <div [hidden]="!graphs" align = "center" style="background-color:rgb(255, 255, 255)">
             <br/> 
         <h2>ANALYSIS: </h2>
         <br/>
         <div>
             <h3>STATISTICAL: </h3>
            
-              
-            <img src="assets/img/anova.png" width="300px" height="300px">
+              <img src="assets/img/anova.png" width="300px" height="300px" style="background-color:rgb(255, 255, 255)">
            
         </div>
         <br/>
-        
-            <svg id="visualisation" width="500" height="500"></svg>
-        
-				</section>
+        <div>
+            <h3>GRAPHICAL: </h3>
+            <img src="assets/img/analysis.jpg" width="500px" height="500px" style="background-color:rgb(255, 255, 255)">
+        </div>
+			</div>
 
 				<footer> 
 					 
